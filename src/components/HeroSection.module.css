@@ -1,0 +1,116 @@
+.hero {
+  position: relative;
+  /* The ImageSequenceCanvas inside sets its own height (400vh) */
+}
+
+/* Overlay sits on top and is fixed-positioned — scoped by master opacity */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-content);
+  pointer-events: none;
+  text-align: center;
+}
+
+.textBlock {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.greeting {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 500;
+  color: var(--accent-cyan);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  color: var(--accent-orange);
+  font-weight: 500;
+  max-width: none;
+}
+
+.tagline {
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Scroll-down mouse indicator */
+.scrollHint {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: var(--z-content);
+  pointer-events: none;
+}
+
+.scrollHint span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+}
+
+.scrollMouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.scrollDot {
+  width: 4px;
+  height: 10px;
+  border-radius: 4px;
+  background: var(--accent-cyan);
+  animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%      { transform: translateY(12px); opacity: 0.2; }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: clamp(2.5rem, 12vw, 4.5rem);
+  }
+}
