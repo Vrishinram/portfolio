@@ -3,10 +3,11 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
 
-const FRAME_COUNT = 120;
+const FRAME_COUNT = 110;
 
 function getFramePath(index: number): string {
-  const padded = String(index).padStart(3, '0');
+  const adjustedIndex = index + 10; // Frames start at 010
+  const padded = String(adjustedIndex).padStart(3, '0');
   return `/sequence/frame_${padded}_delay-0.066s.png`;
 }
 
