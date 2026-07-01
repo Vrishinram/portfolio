@@ -31,19 +31,19 @@ export default function AboutSection() {
         </motion.h2>
 
         <motion.p custom={2} variants={fadeUp} className={styles.bio}>
-          I&apos;m a 3rd-year B.Tech Cybersecurity student with a strong foundation
-          in blue teaming, incident response, and SOC analysis. With hands-on
-          internship experience at Vetri Technologies and multiple industry
-          certifications including ISO/IEC 27001 Lead Auditor, I combine
-          technical expertise with a passion for building intelligent security
-          solutions — from agentic AI systems to compliance scanners.
+          I&apos;m a B.Tech Cybersecurity student with a strong foundation in blue
+          teaming, incident response, and SOC analysis. With hands-on internship
+          experience and multiple industry credentials including ISO/IEC 27001
+          Lead Auditor and Certified Online Fraud Prevention Specialist (COFPS),
+          I combine technical expertise with a passion for building intelligent
+          security solutions — from agentic AI systems to compliance scanners.
         </motion.p>
 
         <motion.div custom={3} variants={fadeUp} className={styles.stats}>
           {[
             { value: '7.1', label: 'CGPA' },
-            { value: '5+', label: 'Certifications' },
-            { value: '4+', label: 'Projects' },
+            { value: '9+', label: 'Certifications' },
+            { value: '11', label: 'Projects' },
             { value: '1st', label: 'IIT Madras Hackathon' },
           ].map((s) => (
             <div key={s.label} className={`glass-card ${styles.stat}`}>

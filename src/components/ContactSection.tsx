@@ -14,7 +14,7 @@ const fadeUp = {
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/Vrishinram', icon: '↗' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vrishin-ram-k-', icon: '↗' },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/vrishin-ram-k', icon: '↗' },
   { label: 'Email', href: 'mailto:vrishinram4646@gmail.com', icon: '✉' },
 ];
 
