@@ -71,3 +71,57 @@
     justify-content: center;
   }
 }
+
+.badgeContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: transform var(--duration-med) var(--ease-out-expo),
+              border-color var(--duration-med) var(--ease-out-expo),
+              box-shadow var(--duration-med) var(--ease-out-expo);
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(83, 227, 153, 0.35);
+  box-shadow: 0 0 25px rgba(83, 227, 153, 0.18);
+}
+
+.badgeLogo {
+  height: 20px;
+  width: auto;
+  opacity: 0.95;
+  transition: opacity var(--duration-fast);
+}
+
+.badge:hover .badgeLogo {
+  opacity: 1;
+}
+
+.badgeDivider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.badgeStatus {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #53e399; /* premium flyrank emerald green */
+  letter-spacing: 0.12em;
+}
