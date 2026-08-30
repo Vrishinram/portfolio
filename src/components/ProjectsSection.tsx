@@ -72,15 +72,6 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/Vrishinram/Port-Checker',
   },
   {
-    title: 'hushh-research – Threat Feeds & Cryptography',
-    description:
-      'Open-source research project containing custom threat feeds, security playbooks, and research on quantum computing foundations and its impact on modern cryptography.',
-    tech: ['Python', 'Quantum', 'Threat Intelligence'],
-    color: '#84cc16',
-    liveUrl: 'https://kai.hushh.ai',
-    githubUrl: 'https://github.com/Vrishinram/hushh-research',
-  },
-  {
     title: 'Obfuscator – Secure Cryptographic Scrambler',
     description:
       'File obfuscation tool implementing access control logic, key-based scrambling, and metadata hashing to prevent unauthorized access and data exfiltration.',
