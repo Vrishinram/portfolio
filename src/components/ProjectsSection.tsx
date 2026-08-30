@@ -8,6 +8,8 @@ interface Project {
   description: string;
   tech: string[];
   color: string;
+  liveUrl?: string;
+  githubUrl: string;
 }
 
 const projects: Project[] = [
@@ -17,6 +19,25 @@ const projects: Project[] = [
       'Dual-core autonomous SOC system combining a Gemini 2.5 Flash agentic AI engine with a TensorFlow deep learning autoencoder to detect IoT attacks including botnet infections, DDoS, and ransomware. Includes 5 autonomous investigation tools.',
     tech: ['Python', 'Gemini 2.5', 'TensorFlow', 'LangChain'],
     color: 'var(--accent-cyan)',
+    githubUrl: 'https://github.com/Vrishinram/Cybersicker',
+  },
+  {
+    title: 'Cyberguard – Password Security Suite',
+    description:
+      'Real-time client-side evaluation of password complexity, Shannon entropy, keyboard pattern, and Have I Been Pwned breach validation via API using k-anonymity.',
+    tech: ['JavaScript', 'HTML5', 'HIBP API'],
+    color: '#00FF88',
+    liveUrl: 'https://vrishinram.github.io/Cyberguard/',
+    githubUrl: 'https://github.com/Vrishinram/Cyberguard',
+  },
+  {
+    title: 'BruteShield – Adaptive Brute-Force Defense',
+    description:
+      'Interactive mitigation tool and security dashboard simulating adaptive progressive lockouts, IP threat tracking, and real-time defense against brute-force intrusion attempts.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Mitigation'],
+    color: '#00FF88',
+    liveUrl: 'https://vrishinram.github.io/BruteShield/',
+    githubUrl: 'https://github.com/Vrishinram/BruteShield',
   },
   {
     title: 'CyDetect – ML Email Threat Classifier',
@@ -24,6 +45,7 @@ const projects: Project[] = [
       'Developed a machine learning-powered email threat classifier that categorizes messages into five types: phishing, malware, BEC, spam, and safe using a Random Forest classifier and NLP pipeline.',
     tech: ['Python', 'Scikit-learn', 'NLP', 'NLTK'],
     color: 'var(--accent-orange)',
+    githubUrl: 'https://github.com/Vrishinram/CyDetect',
   },
   {
     title: 'CyAuth – Secure Authentication Engine',
@@ -31,27 +53,15 @@ const projects: Project[] = [
       'Architected a secure full-stack authentication platform. Pairs a Node.js/Express backend handling authentication logic and SQLite integration with a React frontend.',
     tech: ['Node.js', 'React', 'Express', 'JWT'],
     color: 'var(--accent-blue)',
+    githubUrl: 'https://github.com/Vrishinram/CyAuth',
   },
   {
-    title: 'Cyberguard – Password Complexity Scanner',
+    title: 'rootsecurity – OWASP Top 10 Assessment',
     description:
-      'Real-time client-side evaluation of password complexity, Shannon entropy, keyboard pattern, and Have I Been Pwned breach validation via API using k-anonymity.',
-    tech: ['JavaScript', 'HTML5', 'HIBP API'],
-    color: '#a855f7',
-  },
-  {
-    title: 'BruteShield – Linux Lockout Manager',
-    description:
-      'Monitored authentication log files in real-time, parsed failed login patterns, enforced progressive lockout policies, and triggered email alerts.',
-    tech: ['Python', 'Linux', 'Bash', 'Mitigation'],
-    color: '#f43f5e',
-  },
-  {
-    title: 'Obfuscator – Secure Cryptographic Scrambler',
-    description:
-      'File obfuscation tool implementing access control logic, key-based scrambling, and metadata hashing to prevent unauthorized access and data exfiltration.',
-    tech: ['Python', 'Cryptography', 'Hashing'],
-    color: '#eab308',
+      'Interactive OWASP Top 10 security assessment web platform for startup applications covering 5 attack surfaces with live interactive vulnerability demos and automated PDF report generation.',
+    tech: ['TypeScript', 'React', 'TanStack', 'Tailwind'],
+    color: '#ec4899',
+    githubUrl: 'https://github.com/Vrishinram/rootsecuity',
   },
   {
     title: 'Port-Checker – Flask TCP Scan Tracker',
@@ -59,27 +69,7 @@ const projects: Project[] = [
       'Check whether TCP ports are open or closed on any host. Designed with a custom Flask/Python scanning backend and a responsive vanilla JS frontend.',
     tech: ['Python', 'Flask', 'TCP', 'JavaScript'],
     color: '#10b981',
-  },
-  {
-    title: 'CyRecon – Network Reconnaissance Wrapper',
-    description:
-      'Automated network reconnaissance and vulnerability mapper wrapper. Scanned hosts using Nmap, resolved active services, and cross-referenced threat feeds.',
-    tech: ['Python', 'Nmap', 'Recon', 'OS'],
-    color: '#06b6d4',
-  },
-  {
-    title: 'TriadSec – Threat Intelligence Parser',
-    description:
-      'Threat intelligence parsing and secure compliance scanner utility mapping systems against GRC requirements, evaluating confidentiality, integrity, and availability.',
-    tech: ['Python', 'SQLite', 'GRC', 'Compliance'],
-    color: '#6366f1',
-  },
-  {
-    title: 'rootsecurity – Workspace Privilege Auditor',
-    description:
-      'Identity protection, access control scanner, and privilege auditor built to evaluate permissions structure in developer workspace environments.',
-    tech: ['TypeScript', 'React', 'Access Control'],
-    color: '#ec4899',
+    githubUrl: 'https://github.com/Vrishinram/Port-Checker',
   },
   {
     title: 'hushh-research – Threat Feeds & Cryptography',
@@ -87,6 +77,32 @@ const projects: Project[] = [
       'Open-source research project containing custom threat feeds, security playbooks, and research on quantum computing foundations and its impact on modern cryptography.',
     tech: ['Python', 'Quantum', 'Threat Intelligence'],
     color: '#84cc16',
+    liveUrl: 'https://kai.hushh.ai',
+    githubUrl: 'https://github.com/Vrishinram/hushh-research',
+  },
+  {
+    title: 'Obfuscator – Secure Cryptographic Scrambler',
+    description:
+      'File obfuscation tool implementing access control logic, key-based scrambling, and metadata hashing to prevent unauthorized access and data exfiltration.',
+    tech: ['Python', 'Cryptography', 'Hashing'],
+    color: '#eab308',
+    githubUrl: 'https://github.com/Vrishinram/Obfuscator',
+  },
+  {
+    title: 'CyRecon – Network Reconnaissance Wrapper',
+    description:
+      'Automated network reconnaissance and vulnerability mapper wrapper. Scanned hosts using Nmap, resolved active services, and cross-referenced threat feeds.',
+    tech: ['Python', 'Nmap', 'Recon', 'OS'],
+    color: '#06b6d4',
+    githubUrl: 'https://github.com/Vrishinram/CyRecon',
+  },
+  {
+    title: 'TriadSec – Threat Intelligence Parser',
+    description:
+      'Threat intelligence parsing and secure compliance scanner utility mapping systems against GRC requirements, evaluating confidentiality, integrity, and availability.',
+    tech: ['Python', 'SQLite', 'GRC', 'Compliance'],
+    color: '#6366f1',
+    githubUrl: 'https://github.com/Vrishinram/-TriadSec',
   },
 ];
 
@@ -140,6 +156,27 @@ export default function ProjectsSection() {
                     {t}
                   </span>
                 ))}
+              </div>
+              <div className={styles.cardActions}>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.liveBtn}
+                  >
+                    <span className={styles.pulseDot} />
+                    Live Demo ↗
+                  </a>
+                )}
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.githubBtn}
+                >
+                  GitHub ↗
+                </a>
               </div>
             </motion.article>
           ))}
