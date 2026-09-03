@@ -73,6 +73,11 @@ body {
   min-height: 100vh;
 }
 
+main {
+  position: relative;
+  width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
