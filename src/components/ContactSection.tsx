@@ -58,19 +58,6 @@ export default function ContactSection() {
         </motion.div>
       </motion.div>
 
-      {/* Graduate Badge */}
-      <motion.div variants={fadeUp} className={styles.badgeContainer}>
-        <a
-          href="https://internship.flyrank.ai/verify"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.badge}
-        >
-          <img src="/flyrank-wordmark.svg" alt="FlyRank AI" className={styles.badgeLogo} />
-          <span className={styles.badgeDivider} />
-          <span className={styles.badgeStatus}>GRADUATE</span>
-        </a>
-      </motion.div>
 
       {/* Footer */}
       <motion.footer variants={fadeUp} className={styles.footer}>
