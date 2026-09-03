@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useCallback } from 'react';
-import { useScroll, useTransform, useMotionValueEvent } from 'framer-motion';
+import { MotionValue, useTransform, useMotionValueEvent } from 'framer-motion';
 
 const FRAME_COUNT = 110;
 
@@ -11,54 +11,31 @@ function getFramePath(index: number): string {
   return `/sequence/frame_${padded}_delay-0.066s.png`;
 }
 
-export default function ImageSequenceCanvas() {
-  const containerRef = useRef<HTMLDivElement>(null);
+interface ImageSequenceCanvasProps {
+  scrollYProgress: MotionValue<number>;
+}
+
+export default function ImageSequenceCanvas({ scrollYProgress }: ImageSequenceCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imagesRef = useRef<HTMLImageElement[]>([]);
   const currentFrameRef = useRef(0);
   const rafRef = useRef<number | null>(null);
 
-  // Scroll tracking scoped to the container
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
-
   const frameIndex = useTransform(scrollYProgress, [0, 1], [0, FRAME_COUNT - 1]);
-
-  // Preload all images
-  useEffect(() => {
-    const images: HTMLImageElement[] = [];
-
-    for (let i = 0; i < FRAME_COUNT; i++) {
-      const img = new Image();
-      img.src = getFramePath(i);
-      images.push(img);
-    }
-
-    imagesRef.current = images;
-
-    // Draw first frame when loaded
-    images[0].onload = () => {
-      drawFrame(0);
-    };
-
-    return () => {
-      if (rafRef.current) cancelAnimationFrame(rafRef.current);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   const drawFrame = useCallback((index: number) => {
     const canvas = canvasRef.current;
-    const ctx = canvas?.getContext('2d');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
     const img = imagesRef.current[index];
 
-    if (!canvas || !ctx || !img || !img.complete) return;
+    if (!ctx || !img || !img.complete || img.naturalWidth === 0) return;
 
     // Set canvas size to match viewport
     const dpr = window.devicePixelRatio || 1;
     const rect = canvas.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
     ctx.scale(dpr, dpr);
@@ -85,9 +62,33 @@ export default function ImageSequenceCanvas() {
     ctx.drawImage(img, drawX, drawY, drawWidth, drawHeight);
   }, []);
 
+  // Preload all images
+  useEffect(() => {
+    const images: HTMLImageElement[] = [];
+
+    for (let i = 0; i < FRAME_COUNT; i++) {
+      const img = new Image();
+      img.src = getFramePath(i);
+      images.push(img);
+    }
+
+    imagesRef.current = images;
+
+    // Draw first frame when loaded or immediately if cached
+    if (images[0].complete) {
+      drawFrame(0);
+    } else {
+      images[0].onload = () => drawFrame(0);
+    }
+
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [drawFrame]);
+
   // Listen to frame index changes
   useMotionValueEvent(frameIndex, 'change', (latest) => {
-    const rounded = Math.round(latest);
+    const rounded = Math.min(FRAME_COUNT - 1, Math.max(0, Math.round(latest)));
     if (rounded !== currentFrameRef.current) {
       currentFrameRef.current = rounded;
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -103,31 +104,15 @@ export default function ImageSequenceCanvas() {
   }, [drawFrame]);
 
   return (
-    <div
-      ref={containerRef}
+    <canvas
+      ref={canvasRef}
       style={{
-        height: '400vh',
-        position: 'relative',
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        display: 'block',
       }}
-    >
-      <div
-        style={{
-          position: 'sticky',
-          top: 0,
-          width: '100%',
-          height: '100vh',
-          overflow: 'hidden',
-        }}
-      >
-        <canvas
-          ref={canvasRef}
-          style={{
-            width: '100%',
-            height: '100%',
-            display: 'block',
-          }}
-        />
-      </div>
-    </div>
+    />
   );
 }

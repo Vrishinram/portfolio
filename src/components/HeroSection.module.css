@@ -1,15 +1,31 @@
 .hero {
   position: relative;
-  /* The ImageSequenceCanvas inside sets its own height (400vh) */
+  height: 260vh;
+  background: var(--bg);
 }
 
-/* Overlay sits on top and is fixed-positioned — scoped by master opacity */
-.overlay {
-  position: fixed;
+.stickyWrapper {
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+}
+
+.canvasGradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(5, 7, 18, 0.2) 0%, rgba(5, 7, 18, 0.65) 75%, #050712 100%),
+              linear-gradient(to bottom, transparent 65%, rgba(5, 7, 18, 0.85) 90%, #050712 100%);
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +41,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  padding: 0 1.5rem;
 }
 
 .greeting {
@@ -67,7 +84,7 @@
 
 /* Scroll-down mouse indicator */
 .scrollHint {
-  position: fixed;
+  position: absolute;
   bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
@@ -114,3 +131,4 @@
     font-size: clamp(2.5rem, 12vw, 4.5rem);
   }
 }
+
