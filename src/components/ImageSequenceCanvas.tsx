@@ -8,7 +8,8 @@ const FRAME_COUNT = 110;
 function getFramePath(index: number): string {
   const adjustedIndex = index + 10; // Frames start at 010
   const padded = String(adjustedIndex).padStart(3, '0');
-  return `/sequence/frame_${padded}_delay-0.066s.png`;
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  return `${basePath}/sequence/frame_${padded}_delay-0.066s.png`;
 }
 
 interface ImageSequenceCanvasProps {
