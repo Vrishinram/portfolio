@@ -11,24 +11,83 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: 'Cybersecurity',
+    title: 'Cybersecurity & Blue Teaming',
     icon: '🛡️',
-    skills: ['SOC Analysis', 'Incident Response', 'Blue Teaming', 'Digital Forensics', 'ICS/SCADA Security'],
+    skills: [
+      'SOC Analysis & Alert Triage',
+      'Incident Response & DFIR',
+      'Digital Forensics (Autopsy)',
+      'SIEM Operations (Splunk)',
+      'Threat Intelligence & IOCs',
+      'Network Traffic Analysis (Wireshark)',
+      'ICS/SCADA Security Basics',
+      'Kali Linux Operations',
+    ],
+  },
+  {
+    title: 'AI Security & Red Teaming',
+    icon: '🤖',
+    skills: [
+      'LLM Security & Red Teaming',
+      'Prompt Injection & Jailbreak Mitigation',
+      'LLM Safety & Output Drift Evaluation',
+      'Agentic AI Architectures',
+      'Autonomous Reasoning Pipelines',
+      'Adversarial Attack Simulation',
+    ],
+  },
+  {
+    title: 'Frameworks & Standards',
+    icon: '📋',
+    skills: [
+      'MITRE ATT&CK (Enterprise & ICS)',
+      'NIST Cybersecurity Framework 2.0',
+      'ISO/IEC 27001:2022 ISMS',
+      'OWASP Top 10 Web Security',
+      'OWASP Top 10 for LLMs',
+    ],
   },
   {
     title: 'Tools & Platforms',
     icon: '🔧',
-    skills: ['Wireshark', 'Splunk', 'Nmap', 'Autopsy', 'Kali Linux'],
+    skills: [
+      'Wireshark (Deep Packet Capture)',
+      'Splunk SIEM',
+      'Nmap (Recon & Fingerprinting)',
+      'Autopsy Forensic Suite',
+      'Cisco Packet Tracer',
+      'VMware Workstation',
+      'Metasploit (Basics)',
+      'VS Code & Git/GitHub',
+    ],
   },
   {
-    title: 'Development',
-    icon: '💻',
-    skills: ['Python', 'C', 'Bash Scripting', 'HTML/CSS/JS', 'Next.js / React'],
-  },
-  {
-    title: 'AI & Emerging Tech',
+    title: 'AI, ML & LLMs',
     icon: '🧠',
-    skills: ['Agentic AI', 'Generative AI', 'Prompt Engineering', 'Quantum Computing', 'MongoDB'],
+    skills: [
+      'LangChain Framework',
+      'Anthropic Claude API',
+      'Google Gemini 2.5 Flash',
+      'Scikit-learn & NLTK',
+      'TensorFlow / Keras Autoencoders',
+      'RAG & ChromaDB Vector Stores',
+      'HuggingFace Embeddings',
+      'Prompt Architecture',
+    ],
+  },
+  {
+    title: 'Programming & Backend',
+    icon: '💻',
+    skills: [
+      'Python (Automation & Security Tooling)',
+      'C Programming',
+      'Bash / Shell Scripting',
+      'JavaScript (ES6+) / TypeScript',
+      'SQL & Database Security',
+      'Node.js & Express.js',
+      'React & Next.js',
+      'Flask REST APIs & MongoDB',
+    ],
   },
 ];
 

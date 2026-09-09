@@ -14,84 +14,84 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Cybersicker – Dual-Core Autonomous SOC',
+    title: 'Cybersicker – Dual-Core Autonomous SOC AI',
     description:
-      'Dual-core autonomous SOC system combining a Gemini 2.5 Flash agentic AI engine with a TensorFlow deep learning autoencoder to detect IoT attacks including botnet infections, DDoS, and ransomware. Includes 5 autonomous investigation tools.',
-    tech: ['Python', 'Gemini 2.5', 'TensorFlow', 'LangChain'],
+      'Dual-core autonomous SOC combining an LLM agentic engine (Gemini 2.5 Flash + LangChain) with a deep learning autoencoder, detecting 5+ IoT attack types with 95%+ accuracy. Unified 5 investigation tools with real-time Streamlit dashboard mapped to MITRE ATT&CK and NIST CSF 2.0.',
+    tech: ['Python', 'LangChain', 'Gemini 2.5 Flash', 'TensorFlow/Keras', 'ChromaDB', 'Streamlit'],
     color: 'var(--accent-cyan)',
     githubUrl: 'https://github.com/Vrishinram/Cybersicker',
   },
   {
-    title: 'Cyberguard – Password Security Suite',
+    title: 'CyDetect – Advanced AI Phishing & Threat Classifier',
     description:
-      'Real-time client-side evaluation of password complexity, Shannon entropy, keyboard pattern, and Have I Been Pwned breach validation via API using k-anonymity.',
-    tech: ['JavaScript', 'HTML5', 'HIBP API'],
+      'Trained a Random Forest classifier on 10,000+ samples across 5 threat categories (phishing, malware, BEC, spam, safe) with a 6-dimensional NLP feature extraction pipeline and real-time Flask analytics dashboard.',
+    tech: ['Python', 'Flask', 'Scikit-learn', 'NLTK', 'TF-IDF', 'Chart.js'],
+    color: 'var(--accent-orange)',
+    githubUrl: 'https://github.com/Vrishinram/CyDetect',
+  },
+  {
+    title: 'CyGuard – Password Strength & Breach Analyzer',
+    description:
+      'Enterprise-grade password analyzer rating credentials across 5 strength tiers using 6 evaluation dimensions and validating against 10+ billion breached records via Have I Been Pwned k-anonymity API with zero raw-password exposure.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'HIBP API', 'k-Anonymity'],
     color: '#00FF88',
     liveUrl: 'https://vrishinram.github.io/Cyberguard/',
     githubUrl: 'https://github.com/Vrishinram/Cyberguard',
   },
   {
-    title: 'BruteShield – Adaptive Brute-Force Defense',
+    title: 'BruteShield – Adaptive Brute-Force Defense System',
     description:
-      'Interactive mitigation tool and security dashboard simulating adaptive progressive lockouts, IP threat tracking, and real-time defense against brute-force intrusion attempts.',
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'Mitigation'],
+      'Authentication protection system enforcing progressive account lockouts, dynamic delay escalation, and real-time suspicious-IP flagging to actively block credential-stuffing and intrusion attempts.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Defense Engineering'],
     color: '#00FF88',
     liveUrl: 'https://vrishinram.github.io/BruteShield/',
     githubUrl: 'https://github.com/Vrishinram/BruteShield',
   },
   {
-    title: 'CyDetect – ML Email Threat Classifier',
+    title: 'CyAuth – OWASP Top 10 Authentication System',
     description:
-      'Developed a machine learning-powered email threat classifier that categorizes messages into five types: phishing, malware, BEC, spam, and safe using a Random Forest classifier and NLP pipeline.',
-    tech: ['Python', 'Scikit-learn', 'NLP', 'NLTK'],
-    color: 'var(--accent-orange)',
-    githubUrl: 'https://github.com/Vrishinram/CyDetect',
-  },
-  {
-    title: 'CyAuth – Secure Authentication Engine',
-    description:
-      'Architected a secure full-stack authentication platform. Pairs a Node.js/Express backend handling authentication logic and SQLite integration with a React frontend.',
-    tech: ['Node.js', 'React', 'Express', 'JWT'],
+      'Production-grade full-stack auth platform engineered with bcrypt hashing, JWT session security, and rate-limiting aligned to OWASP Top 10 guidelines, reducing attack surface exposure by 30%.',
+    tech: ['Node.js', 'Express.js', 'React', 'Vite', 'JWT', 'Bcrypt'],
     color: 'var(--accent-blue)',
     githubUrl: 'https://github.com/Vrishinram/CyAuth',
   },
   {
-    title: 'rootsecurity – OWASP Top 10 Assessment',
+    title: 'rootsecurity – OWASP Top 10 Web Security Audit',
     description:
-      'Interactive OWASP Top 10 security assessment web platform for startup applications covering 5 attack surfaces with live interactive vulnerability demos and automated PDF report generation.',
-    tech: ['TypeScript', 'React', 'TanStack', 'Tailwind'],
+      'Interactive security assessment web platform covering 5 web application attack surfaces with live interactive vulnerability demos and automated executive PDF audit report generation.',
+    tech: ['TypeScript', 'React 19', 'TanStack', 'Tailwind CSS'],
     color: '#ec4899',
     githubUrl: 'https://github.com/Vrishinram/rootsecuity',
   },
   {
-    title: 'Port-Checker – Flask TCP Scan Tracker',
+    title: 'Port-Checker – High-Speed Subnet Port Scanner',
     description:
-      'Check whether TCP ports are open or closed on any host. Designed with a custom Flask/Python scanning backend and a responsive vanilla JS frontend.',
-    tech: ['Python', 'Flask', 'TCP', 'JavaScript'],
+      'Multi-threaded port scanning utility capable of enumerating a full Class-C subnet in under 30 seconds, cutting manual network reconnaissance time by 70%.',
+    tech: ['Python', 'Multi-threading', 'TCP/IP', 'Flask', 'JavaScript'],
     color: '#10b981',
     githubUrl: 'https://github.com/Vrishinram/Port-Checker',
   },
   {
-    title: 'Obfuscator – Secure Cryptographic Scrambler',
+    title: 'Obfuscator – Layered XOR File Security Utility',
     description:
-      'File obfuscation tool implementing access control logic, key-based scrambling, and metadata hashing to prevent unauthorized access and data exfiltration.',
-    tech: ['Python', 'Cryptography', 'Hashing'],
+      'File access-control and anti-exfiltration utility applying layered XOR encryption and role-based access permissions across 3+ sensitive asset categories.',
+    tech: ['Python', 'Layered XOR', 'Cryptography', 'Access Control'],
     color: '#eab308',
     githubUrl: 'https://github.com/Vrishinram/Obfuscator',
   },
   {
-    title: 'CyRecon – Network Reconnaissance Wrapper',
+    title: 'CyRecon – Automated Recon & Service Fingerprinting',
     description:
-      'Automated network reconnaissance and vulnerability mapper wrapper. Scanned hosts using Nmap, resolved active services, and cross-referenced threat feeds.',
-    tech: ['Python', 'Nmap', 'Recon', 'OS'],
+      'Reconnaissance automation wrapper executing Nmap port scans, operating system fingerprinting, and service enumeration against live endpoints.',
+    tech: ['Python', 'Nmap', 'OS Fingerprinting', 'Recon Automation'],
     color: '#06b6d4',
     githubUrl: 'https://github.com/Vrishinram/CyRecon',
   },
   {
-    title: 'TriadSec – Threat Intelligence Parser',
+    title: 'TriadSec – Threat Intelligence & Compliance Scanner',
     description:
-      'Threat intelligence parsing and secure compliance scanner utility mapping systems against GRC requirements, evaluating confidentiality, integrity, and availability.',
-    tech: ['Python', 'SQLite', 'GRC', 'Compliance'],
+      'Security compliance scanner utility evaluating enterprise infrastructure against CIA triad and GRC requirements with automated SQLite audit logging.',
+    tech: ['Python', 'SQLite', 'GRC', 'Compliance Auditing'],
     color: '#6366f1',
     githubUrl: 'https://github.com/Vrishinram/-TriadSec',
   },

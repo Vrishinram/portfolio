@@ -37,9 +37,8 @@ export default function ContactSection() {
         </motion.h2>
 
         <motion.p variants={fadeUp} className={styles.desc}>
-          I&apos;m actively seeking cybersecurity analyst roles and excited to
-          collaborate on innovative projects in security, AI, and web development.
-          Let&apos;s connect and make it happen.
+          Seeking Cyber Analyst, SOC Analyst, or AI Security roles applying expertise in threat detection,
+          digital forensics, SIEM operations, LLM red teaming, and security automation. Let&apos;s connect and collaborate!
         </motion.p>
 
         <motion.div variants={fadeUp} className={styles.links}>

@@ -31,19 +31,19 @@ export default function AboutSection() {
         </motion.h2>
 
         <motion.p custom={2} variants={fadeUp} className={styles.bio}>
-          I&apos;m a B.Tech Cybersecurity student with a strong foundation in blue
-          teaming, incident response, and SOC analysis. With hands-on internship
-          experience and multiple industry credentials including ISO/IEC 27001
-          Lead Auditor and Certified Online Fraud Prevention Specialist (COFPS),
-          I combine technical expertise with a passion for building intelligent
-          security solutions — from agentic AI systems to compliance scanners.
+          I&apos;m a 4th-year B.Tech Cybersecurity student with five hands-on industry internships
+          spanning SOC analysis, blue teaming, AI/LLM security, network security, incident
+          response, and security tool development. First-author of a peer-reviewed IoT intrusion
+          detection paper (Impact Factor 8.76, 98.31% accuracy), holder of 10+ certifications
+          including ISO/IEC 27001:2022 Lead Auditor, Certified LLM Security Expert (CLLMSE),
+          and COFPS, and Primary Organizer of DEF CON Group Tiruchirappalli (DC0431).
         </motion.p>
 
         <motion.div custom={3} variants={fadeUp} className={styles.stats}>
           {[
-            { value: '7.1', label: 'CGPA' },
-            { value: '9+', label: 'Certifications' },
-            { value: '11', label: 'Projects' },
+            { value: '5', label: 'Industry Internships' },
+            { value: '10+', label: 'Certifications' },
+            { value: '98.3%', label: 'IoT Detection (IF 8.76)' },
             { value: '1st', label: 'IIT Madras Hackathon' },
           ].map((s) => (
             <div key={s.label} className={`glass-card ${styles.stat}`}>

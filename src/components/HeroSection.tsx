@@ -53,7 +53,7 @@ export default function HeroSection() {
               Cybersecurity Analyst
             </h2>
             <p className={styles.subtitle}>
-              Blue Teaming &amp; SOC Operations
+              Blue Teaming · AI Security · SOC Operations
             </p>
           </motion.div>
 
@@ -63,7 +63,7 @@ export default function HeroSection() {
           >
             <p className={styles.tagline}>
               Securing digital frontiers with<br />
-              threat intelligence &amp; agentic AI.
+              threat intelligence, SIEM &amp; agentic AI.
             </p>
           </motion.div>
         </div>
