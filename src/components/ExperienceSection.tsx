@@ -90,34 +90,7 @@ const experiences: ExperienceItem[] = [
     ],
     tags: ['Splunk SIEM', 'Wireshark', 'Alert Triage', 'Detection Engineering', 'Traffic Analysis'],
   },
-  {
-    id: 'defcon-trichy',
-    category: 'leadership',
-    role: 'Primary Organizer',
-    organization: 'DEF CON Group Tiruchirappalli (DC0431 / DCG91431)',
-    period: 'Aug 2026 – Present',
-    location: 'Tiruchirappalli',
-    badge: 'Community Founder',
-    highlights: [
-      'Founded and registered the official DEF CON Group in Trichy, organizing workshops in network security, packet analysis, and CTF competitions.',
-      'Fostered a collaborative community for ethical hackers, students, and cybersecurity researchers across the region.',
-    ],
-    tags: ['DEF CON', 'DC0431', 'Community Leadership', 'CTF Competitions', 'Network Security'],
-  },
-  {
-    id: 'google-ambassador',
-    category: 'leadership',
-    role: 'Google Campus Ambassador',
-    organization: 'Dhanalakshmi Srinivasan University',
-    period: 'May 2026 – Present',
-    location: 'Trichy',
-    badge: 'Ambassador',
-    highlights: [
-      'Represent Google developer technologies and AI tools across campus, conducting student workshops and developer sessions.',
-      'Evangelize hands-on generative AI, developer ecosystems, and cloud technologies to 300+ students.',
-    ],
-    tags: ['Google', 'Campus Ambassador', 'Developer Relations', 'AI Workshops'],
-  },
+
   {
     id: 'nexus-26',
     category: 'leadership',
@@ -171,7 +144,7 @@ export default function ExperienceSection() {
           Experience &amp; <span className="grad-text">Leadership</span>
         </h2>
         <p style={{ color: 'var(--text-secondary)', marginBottom: 'var(--space-xl)', maxWidth: '640px' }}>
-          Five hands-on industry internships in SOC operations, AI security, blue teaming, and security automation — paired with community leadership founding DEF CON Group Trichy.
+          Five hands-on industry internships in SOC operations, AI security, blue teaming, and security automation — paired with technical event leadership and community coordination.
         </p>
 
         <div className={styles.filters}>

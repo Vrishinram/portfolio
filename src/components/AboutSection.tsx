@@ -36,7 +36,7 @@ export default function AboutSection() {
           response, and security tool development. First-author of a peer-reviewed IoT intrusion
           detection paper (Impact Factor 8.76, 98.31% accuracy), holder of 10+ certifications
           including ISO/IEC 27001:2022 Lead Auditor, Certified LLM Security Expert (CLLMSE),
-          and COFPS, and Primary Organizer of DEF CON Group Tiruchirappalli (DC0431).
+          and COFPS.
         </motion.p>
 
         <motion.div custom={3} variants={fadeUp} className={styles.stats}>
