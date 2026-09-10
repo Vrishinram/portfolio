@@ -220,21 +220,21 @@ export default function CertificationsSection() {
             className={`${styles.tabBtn} ${activeTab === 'cert' ? styles.tabBtnActive : ''}`}
             onClick={() => setActiveTab('cert')}
           >
-            Certifications (7)
+            Certifications ({items.filter((i) => i.category === 'cert').length})
           </button>
           <button
             type="button"
             className={`${styles.tabBtn} ${activeTab === 'research' ? styles.tabBtnActive : ''}`}
             onClick={() => setActiveTab('research')}
           >
-            Research Publications (2)
+            Research Publications ({items.filter((i) => i.category === 'research').length})
           </button>
           <button
             type="button"
             className={`${styles.tabBtn} ${activeTab === 'award' ? styles.tabBtnActive : ''}`}
             onClick={() => setActiveTab('award')}
           >
-            Awards &amp; Hackathons (4)
+            Awards &amp; Hackathons ({items.filter((i) => i.category === 'award').length})
           </button>
         </div>
 

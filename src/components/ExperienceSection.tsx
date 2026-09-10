@@ -160,14 +160,14 @@ export default function ExperienceSection() {
             className={`${styles.filterBtn} ${filter === 'internship' ? styles.filterBtnActive : ''}`}
             onClick={() => setFilter('internship')}
           >
-            Internships (5)
+            Internships ({experiences.filter((e) => e.category === 'internship').length})
           </button>
           <button
             type="button"
             className={`${styles.filterBtn} ${filter === 'leadership' ? styles.filterBtnActive : ''}`}
             onClick={() => setFilter('leadership')}
           >
-            Leadership &amp; Community (4)
+            Leadership &amp; Community ({experiences.filter((e) => e.category === 'leadership').length})
           </button>
         </div>
 
